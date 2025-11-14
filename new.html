@@ -1,0 +1,304 @@
+
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Por favor eu realmente quero que vc venha para o 18tão do barbieri</title>
+  <meta name="description" content="Um pedido de desculpas sincero e delicado.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Gloock&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #FFF8FB;
+      --card: #FFFFFF;
+      --accent: #FF6B8A;
+      --accent-2: #FF9AB3;
+      --muted: #6b6b6b;
+      --glass: rgba(255,255,255,0.7);
+      --shadow: 0 8px 30px rgba(18,12,38,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg), #FFF1F6);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .page{
+      width:100%;
+      max-width:980px;
+      background:linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,255,255,0.95));
+      border-radius:18px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 1fr 420px;
+      gap:0;
+      min-height:560px;
+    }
+
+    @media (max-width:900px){
+      .page{grid-template-columns:1fr; padding:18px}
+      .aside{order:2}
+    }
+
+    .hero{
+      padding:48px 56px;
+      background: radial-gradient(1200px 400px at 10% 10%, rgba(255,154,179,0.08), transparent 5%);
+      position:relative;
+    }
+
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .icon{
+      width:56px;height:56px;border-radius:12px;background:linear-gradient(180deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:22px;box-shadow:0 6px 20px rgba(255,107,138,0.18)
+    }
+    .title{
+      margin-top:28px;font-weight:700;font-size:34px;line-height:1.02;letter-spacing:-0.02em;
+      font-family: 'Gloock', serif;
+    }
+    .subtitle{color:var(--muted);margin-top:10px;font-size:15px}
+
+    .card{
+      margin-top:28px;background:var(--card);border-radius:14px;padding:18px;box-shadow:0 6px 18px rgba(18,12,38,0.06);
+    }
+
+    .quote{
+      font-size:18px;color:#333;margin:0;padding:6px 0;line-height:1.5
+    }
+
+    .actions{margin-top:18px;display:flex;gap:12px;align-items:center}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn--accent{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 8px 30px rgba(255,107,138,0.18)}
+    .btn--ghost{background:transparent;border:1px solid rgba(18,12,38,0.06);color:var(--muted)}
+
+    .aside{
+      padding:36px 30px;background: linear-gradient(180deg, rgba(255,234,240,0.6), rgba(255,245,247,0.95));
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+    }
+    .portrait{
+      width:220px;height:220px;border-radius:20px;background:linear-gradient(180deg,#fff,#fff);box-shadow:0 12px 36px rgba(255,154,179,0.15);display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .portrait img{width:100%;height:100%;object-fit:cover}
+
+    .letter{
+      width:100%;background:linear-gradient(180deg,#fff, #FFF8FB);border-radius:12px;padding:14px;box-shadow:0 8px 22px rgba(20,12,38,0.04);font-size:15px;color:#333
+    }
+
+    footer.small{font-size:13px;color:var(--muted);margin-top:12px}
+
+    /* hearts animation */
+    .hearts{position:absolute;right:20px;top:10px;pointer-events:none}
+    .heart{position:absolute;width:18px;height:18px;transform:translateY(0);opacity:0.9}
+
+    /* typewriter */
+    .typewriter{font-size:20px;line-height:1.4}
+    .meta{display:flex;gap:8px;align-items:center;margin-top:12px}
+    .meta .chip{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+  </style>
+</head>
+<body>
+  <div class="page" role="main" aria-labelledby="mainTitle">
+
+    <section class="hero" aria-describedby="subtitle">
+      <div class="logo" aria-hidden>
+        <div class="icon">❤</div>
+        <div>
+          <div style="font-size:13px;color:var(--muted)">Uma mensagem de sua Estrelinha</div>
+          <div style="font-weight:700">Para Minha Pequena</div>
+        </div>
+      </div>
+
+      <h1 id="mainTitle" class="title">Sabe eu sei que não fiz nada certo porem peço para que pelo menos olhe</h1>
+      <p id="subtitle" class="subtitle">Sei que mesmo sendo um suposto dev nunca fiz nenhum projeto em sua homenagem, mais infelizmente o primeiro vai ser pedindo desculpas</p>
+
+      <div class="card" role="article" aria-label="Carta">
+        <p class="quote typewriter" id="apologyText">…</p>
+        <div class="meta">
+          <div class="chip" id="fromChip">De: —</div>
+          <div class="chip" id="toChip">Para: —</div>
+        </div>
+
+        <div class="actions">
+          <button class="btn btn--accent" id="revealBtn">Ler com atenção</button>
+          <button class="btn btn--ghost" id="resetBtn">Reescrever</button>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;color:var(--muted);font-size:13px">Realmente é dificil me aturar porem eu to tentando melhorar </div>
+<div style="margin-top:18px;color:var(--muted);font-size:13px">Realmente é dificil me aturar porem eu to tentando melhorar </div>
+
+<div style="margin-top: 20px;">
+  <a href="cinematica.html" class="btn btn--accent" 
+     style="text-decoration:none;display:inline-block;text-align:center;">
+     Ver o céu que fiz para você
+  </a>
+</div>
+
+      <div class="hearts" aria-hidden id="hearts"></div>
+
+    </section>
+
+    <aside class="aside">
+      <div class="portrait" id="portrait">
+       
+        <img src="whats.img.jpeg" alt="Foto (personalize aqui)">
+      </div>
+
+      <div class="letter">
+        <label for="inputFrom" style="font-weight:600;font-size:13px">Seu nome</label>
+        <input id="inputFrom" placeholder="Seu nome aqui" style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);font-size:14px">
+
+        <label for="inputTo" style="font-weight:600;font-size:13px;margin-top:10px;display:block">Beatriz (minha pequena)</label>
+        <input id="inputTo" placeholder="O nome dela" style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);font-size:14px">
+
+        <label for="inputMsg" style="font-weight:600;font-size:13px;margin-top:10px;display:block">(mensagem que eu espero que vc leia por favorzinho)</label>
+        <textarea id="inputMsg" rows="6" placeholder="Escreva algo sincero. Ex: " + "Sei que errei e quero consertar..." style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);font-size:14px"></textarea>
+
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <button class="btn btn--accent" id="saveBtn" style="flex:1">Salvar</button>
+          <button class="btn btn--ghost" id="previewBtn" style="flex:1">Visualizar</button>
+        </div>
+
+        <div class="small" style="margin-top:8px;color:var(--muted);font-size:13px">Sugestão de linha inicial: "Eu pensei muito antes de fazer isso — e quero assumir tudo que fiz."
+        </div>
+
+      </div>
+
+      <div class="small" style="margin-top:12px;text-align:center">
+        <div style="font-weight:700">Toque gentil</div>
+        <div class="small" style="color:var(--muted)">um pessimo pedido de desculpas mesmo como sempre .</div>
+      </div>
+    </aside>
+
+  </div>
+
+  <script>
+  
+    const nomeSenderInit = '';
+    const nomeRecipientInit = '';
+    const mensagemInit = `Oi, então eu sei que não sou tão bom com palavras principalmente quando o assunto é pedir desculpas sei que fui um extremo babaca com vc e realmente não tiro sua razão de estar me odiando afinal eu mereço, sabe tudo aconteceu tão rapido que eu reamente não sei como deixei as coisas chegarem nesse ponto fiquei tão focado na festa que esqueci o principal, VOCÊ E CARA COMO EU PUDE FAZER ISSO, olha quero poder conversar com vc assumir meus erros e mudar muita coisa quero que vc venha para o big 18tão de barbieri sem vc não vai ser algo divertido, eu entendo que eu estou sendo um otario que eu estou me escondendo atras dos meus erros entendo isso afinal eu literalmente arrumo um jeito de colocar a culpa em todo mundo só para eu me safar que porra é essa bizarro alguem ser tão narcisista, só que sla cara eu te amo simples assim enquanto eu to tentando escrever esse texto para vc eu so fico repetindo essa frase do eu te amo muitas e muitas vezes na minha cabeça e eu realmente escolhi aquela foto e por mais que te conhecendo eu sei que vc vai dizer que essa foto está horrivel eu discordo para mim ela esta muito boa afinal vc esta muito espontanea nela e eu amo isso em vc, bom eu sei que eu nunca fiz algo de dev para vc e realmente não queria começar com um pedido de desculpas porem é oq sobra para mim o litle betinha eu te amo mais que 100 mil milhões `;
+
+   
+    const inputFrom = document.getElementById('inputFrom');
+    const inputTo = document.getElementById('inputTo');
+    const inputMsg = document.getElementById('inputMsg');
+    const saveBtn = document.getElementById('saveBtn');
+    const previewBtn = document.getElementById('previewBtn');
+    const revealBtn = document.getElementById('revealBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const apologyText = document.getElementById('apologyText');
+    const fromChip = document.getElementById('fromChip');
+    const toChip = document.getElementById('toChip');
+    const portrait = document.getElementById('portrait');
+    const heartsContainer = document.getElementById('hearts');
+
+    
+    inputFrom.value = nomeSenderInit;
+    inputTo.value = nomeRecipientInit;
+    inputMsg.value = mensagemInit;
+
+    function makeHeart(x=0,y=0){
+      const h = document.createElement('div');
+      h.className='heart';
+      h.style.left = x + 'px';
+      h.style.top = y + 'px';
+      h.innerHTML = `<svg viewBox="0 0 32 32" width="18" height="18" xmlns="http://www.w3.org/2000/svg"><path fill='%23FF6B8A' d='M23.6 4C21.4 4 19.6 5.2 18.8 6.5 18 5.2 16.2 4 14 4 10.6 4 8 7 8 10.4c0 7.4 8 11.2 8 11.2s8-3.8 8-11.2C24 7 23.1 4.6 23.6 4z'/></svg>`;
+      heartsContainer.appendChild(h);
+      const dur = 3000 + Math.random()*2000;
+      h.animate([
+        { transform: 'translateY(0) scale(0.9)', opacity:1 },
+        { transform: 'translateY(-120px) scale(1.2)', opacity:0 }
+      ],{duration:dur, easing:'ease-out'});
+      setTimeout(()=>h.remove(), dur);
+    }
+
+
+    setInterval(()=>{
+      const y = 20 + Math.random()*200;
+      makeHeart(30 + Math.random()*360, y);
+    }, 900);
+
+    function typeWriter(text, el){
+      el.textContent='';
+      let i=0;
+      const step = ()=>{
+        if(i<=text.length){
+          el.textContent = text.slice(0,i);
+          i+=1;
+          setTimeout(step, 18 + Math.random()*12);
+        }
+      };
+      step();
+    }
+
+    function updateChips(){
+      fromChip.textContent = 'De: ' + (inputFrom.value.trim() || '—');
+      toChip.textContent = 'Para: ' + (inputTo.value.trim() || '—');
+    }
+
+    saveBtn.addEventListener('click', ()=>{
+      updateChips();
+      alert('Salvo localmente na visualização. Agora clique "Ler com atenção" para apresentar.');
+    });
+
+    previewBtn.addEventListener('click', ()=>{
+      updateChips();
+      const preview = (inputMsg.value.trim() || mensagemInit) + '\n\n' + (inputFrom.value ? inputFrom.value : '');
+      typeWriter(preview, apologyText);
+    });
+
+    revealBtn.addEventListener('click', ()=>{
+      updateChips();
+      const full = (inputMsg.value.trim() || mensagemInit) + '\n\n' + (inputFrom.value ? inputFrom.value : '');
+      typeWriter(full, apologyText);
+ 
+      apologyText.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+
+    resetBtn.addEventListener('click', ()=>{
+      if(confirm('Deseja limpar o conteúdo e reescrever a mensagem?')){
+        inputMsg.value = mensagemInit;
+        inputFrom.value = '';
+        inputTo.value = '';
+        apologyText.textContent = '...';
+        updateChips();
+      }
+    });
+
+
+    [inputFrom,inputTo,inputMsg].forEach(i=>i.addEventListener('keydown', (e)=>{ if(e.key==='Enter' && (e.ctrlKey||e.metaKey)) saveBtn.click(); }))
+
+
+    portrait.addEventListener('dragover', (e)=>{ e.preventDefault(); portrait.style.opacity=0.9; });
+    portrait.addEventListener('dragleave', ()=>{ portrait.style.opacity=1; });
+    portrait.addEventListener('drop', (e)=>{
+      e.preventDefault(); portrait.style.opacity=1;
+      const f = e.dataTransfer.files[0];
+      if(!f) return;
+      const reader = new FileReader();
+      reader.onload = ()=>{
+        portrait.querySelector('img').src = reader.result;
+      };
+      reader.readAsDataURL(f);
+    });
+
+
+    updateChips();
+    apologyText.textContent = 'Clique em "Ler com atenção" quando estiver pronto para apresentar.';
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Versão Cinematográfica — Pedido Especial</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Gloock&display=swap" rel="stylesheet">
+<style>
+  body{
+    margin:0;
+    overflow:hidden;
+    font-family:'Montserrat';
+    background:#000;
+  }
+
+  /* Fundo do céu animado */
+  #sky{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(#ff8fb1, #3b1f5e);
+    animation: skyTransition 35s linear forwards;
+    z-index:-5;
+  }
+
+  @keyframes skyTransition{
+    0%{ background:linear-gradient(#ff8fb1, #ffbfd8); }
+    40%{ background:linear-gradient(#ff7aa8, #8b4ea3); }
+    70%{ background:linear-gradient(#2b1d56, #0d0625); }
+    100%{ background:linear-gradient(#02010f, #000); }
+  }
+
+  /* Pétalas */
+  .petal{
+    position:fixed;
+    width:18px;
+    height:18px;
+    background:#ff7fa6;
+    border-radius:80% 20% 80% 20%;
+    opacity:0.8;
+    animation: fall 6s linear infinite;
+  }
+
+  @keyframes fall{
+    0%{ transform:translateY(-10vh) rotate(0deg); opacity:1; }
+    100%{ transform:translateY(110vh) rotate(360deg); opacity:0; }
+  }
+
+  /* Estrelas */
+  .star{
+    position:fixed;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:0.2;
+    animation: twinkle 3s infinite ease-in-out;
+  }
+
+  @keyframes twinkle{
+    0%{ opacity:0.1; }
+    50%{ opacity:1; }
+    100%{ opacity:0.1; }
+  }
+
+  /* Lua */
+  #moon{
+    position:fixed;
+    bottom:-120px;
+    right:50px;
+    width:130px;
+    height:130px;
+    background:#fff9dd;
+    border-radius:50%;
+    box-shadow:0 0 35px #fff7c2;
+    animation: moonRise 35s ease-out forwards;
+    z-index:-4;
+  }
+
+  @keyframes moonRise{
+    0%{ bottom:-160px; opacity:0; }
+    50%{ opacity:1; }
+    100%{ bottom:60vh; }
+  }
+
+  /* Coração secreto */
+  #secretHeart{
+    position:fixed;
+    bottom:30px;
+    left:30px;
+    font-size:42px;
+    cursor:pointer;
+    color:#ff7fa6;
+    text-shadow:0 0 12px #ff8fb1;
+    transition:0.3s;
+  }
+  #secretHeart:hover{ transform:scale(1.2); }
+
+  /* Mensagem secreta */
+  #secretMsg{
+    position:fixed;
+    bottom:100px;
+    left:50%;
+    transform:translateX(-50%);
+    width:80%;
+    max-width:420px;
+    padding:22px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.18);
+    backdrop-filter:blur(10px);
+    color:white;
+    font-size:18px;
+    font-family:'Gloock';
+    text-align:center;
+    display:none;
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn{
+    from{ opacity:0; transform:translate(-50%, 20px); }
+    to{ opacity:1; transform:translate(-50%, 0); }
+  }
+</style>
+</head>
+<body>
+
+<div id="sky"></div>
+<div id="moon"></div>
+<div id="stars"></div>
+<div id="petals"></div>
+
+<div id="secretHeart">❤</div>
+<div id="secretMsg">Você é e sempre foi a parte mais bonita do meu céu. Obrigado por ainda existir na minha vida.</div>
+
+<audio id="bgm" loop>
+  <source src="https://cdn.pixabay.com/audio/2022/03/15/audio_9e3c44d114.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+// Música suave
+setTimeout(()=>{
+  document.getElementById("bgm").volume = 0.4;
+  document.getElementById("bgm").play();
+}, 3000);
+
+// Criar pétalas
+for(let i=0;i<18;i++){
+  let p=document.createElement('div');
+  p.className='petal';
+  p.style.left=Math.random()*100+'vw';
+  p.style.animationDelay=(Math.random()*5)+'s';
+  p.style.background=`hsl(${330+Math.random()*20}, 80%, 75%)`;
+  document.body.appendChild(p);
+}
+
+// Criar estrelas
+for(let i=0;i<160;i++){
+  let s=document.createElement('div');
+  s.className='star';
+  s.style.top=Math.random()*100+'vh';
+  s.style.left=Math.random()*100+'vw';
+  s.style.animationDelay=(Math.random()*3)+'s';
+  s.style.opacity=Math.random();
+  document.body.appendChild(s);
+}
+
+// Coração secreto
+const heart=document.getElementById('secretHeart');
+const msg=document.getElementById('secretMsg');
+let open=false;
+heart.onclick=()=>{
+  open=!open;
+  msg.style.display=open?'block':'none';
+};
+</script>
+
+</body>
+</html>
